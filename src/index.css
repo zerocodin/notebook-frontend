@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-keep-bg: #f8f9fa;
+  --color-keep-border: #e0e0e0;
+  --font-sans: 'Roboto', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--color-keep-bg);
+  color: #202124;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Masonry for the note grid */
+.masonry {
+  column-gap: 1rem;
+}
+@media (min-width: 640px)  { .masonry { column-count: 2; } }
+@media (min-width: 1024px) { .masonry { column-count: 3; } }
+@media (min-width: 1280px) { .masonry { column-count: 4; } }
+.masonry > * { break-inside: avoid; margin-bottom: 1rem; }
