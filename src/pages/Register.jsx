@@ -6,6 +6,7 @@ import PasswordInput from "../components/PasswordInput";
 export default function Register() {
 	const { register } = useAuth();
 	const navigate = useNavigate();
+	const [error, setError] = useState('')
 	const [form, setForm] = useState({ name: "", email: "", password: "" });
 
 	const submit = async (e) => {
